@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title>
+		2017 Synopsys Championship - Generate Individual Application Form
+	</title>
+	<link rel="stylesheet" type="text/css" href="./2017 Synopsys Championship - Generate Individual Application Form_files/html_form.css">
+
+
+	<script>
+
+		function check(){
+
+			if(document.getElementById('one')!=null && document.getElementById('one').checked) {
+				createCookie("numStudents",1,1);
+				console.log("set 1");
+			}
+			else if(document.getElementById('two')!=null && document.getElementById('two').checked) {
+				createCookie("numStudents",2,1);
+			}
+			else if(document.getElementById('three')!=null && document.getElementById('three').checked) {
+				createCookie("numStudents",3,1);
+			}
+			else{
+				createCookie("numStudents",1,1);
+			}
+		}
+
+		function nextPage(){
+
+			check();
+			console.log("received");
+			check();
+			console.log("recieved");
+			var students=readCookie("numStudents");
+			if(students==1) {
+				document.location.href = "Synopsys Individual Application Form Student Information.html";
+				console.log("students is " + students);
+			} 
+			else if(students == 2) {
+				document.location.href = "Synopsys Two Team Application Form Student Information.html"; //change these
+			}
+			else if(students == 3) {
+				document.location.href = "Synopsys Three Team Application Form Student Information.html";
+			}
+			console.log(students);
+		}
+
+		function createCookie(name,value,days) {
+    		var expires = "";
+    		if (days) {
+       			var date = new Date();
+        		date.setTime(date.getTime() + (days*24*60*60*1000));
+        		expires = "; expires=" + date.toUTCString();
+    		}
+    		document.cookie = name + "=" + value + expires + "; path=/";
+		}
+
+		function readCookie(name) {
+    		var nameEQ = name + "=";
+    		var ca = document.cookie.split(';');
+    		for(var i=0;i < ca.length;i++) {
+        		var c = ca[i];
+        		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    		}
+    		return null;
+		}
+
+
+	</script>
+
+</head>
+
+<body>
+	<h1>2017 Synopsys Championship:<br>Individual Application Form</h1>
+
+	<br>
+	<!--<div contenteditable="true">
+		<textarea name="title" value="" required="" placeholder="120 character limit" onkeyup="EnforceMaximumLength(this,120)"></textarea>
+	</div>
+-->
+<div class="form_element">
+	<div class="title"> Number of Students <span class="asterisk">*</span></div>
+	<div class="subtitle">How many students will be working on this project? (not including student mentors)</div>
+	<ul>
+		<li style="padding-left:3em;text-indent:-3em"><label><input onclick="check()" type="radio" name="student_number" id="one" value="1">
+		<span class="label" style="font-weight:bold">One student</span><span class="bad-grade-for-category"></span></label></li>
+		<li style="padding-left:3em;text-indent:-3em"><label><input onclick="check()" type="radio" name="student_number" id="two" value="2">
+		<span class="label" style="font-weight:bold">Two Students</span> <span class="bad-grade-for-category"></span></label></li>
+		<li style="padding-left:3em;text-indent:-3em"><label><input onclick="check()" type="radio" name="student_number" id="three" value="3">
+		<span class="label" style="font-weight:bold">Three Students</span> <span class="bad-grade-for-category"></span></label></li>
+	</ul>
+</div>
+
+
+<div>
+	<form action="Synopsys Application Form Intro Page.html" method="get">
+	<input class="previous" name="previous" type="submit" value="Previous"> 
+	</form>
+	<button type="button" onclick="nextPage()"> Next </button>
+</div>
+
+
+
+</html>
