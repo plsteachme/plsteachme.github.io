@@ -7,6 +7,56 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="./2017 Synopsys Championship - Generate Individual Application Form_files/html_form.css">
 
+	<script>
+
+		window.onunload = function() { clearListCookies(); }
+
+		function clearListCookies() {   
+		    var cookies = document.cookie.split(";");
+		    for (var i = 0; i < cookies.length; i++)
+		    {   
+		        var spcook =  cookies[i].split("=");
+		        deleteCookie(spcook[0]);
+		    }
+
+		    function deleteCookie(cookiename) {
+		        createCookie(cookiename, 0, -1);                    
+		    }
+		}
+
+		function temp(){
+			createCookie("same", 2, 10);
+		}
+
+		function showCookie() {
+			var value = readCookie("same");
+			console.log(value);
+		}
+
+		function createCookie(name,value,days) {
+    		var expires = "";
+    		if (days) {
+       			var date = new Date();
+        		date.setTime(date.getTime() + (days*24*60*60*1000));
+        		expires = "; expires=" + date.toUTCString();
+    		}
+    		document.cookie = name + "=" + value + expires + "; path=/";
+		}
+
+		function readCookie(name) {
+    		var nameEQ = name + "=";
+    		var ca = document.cookie.split(';');
+    		for(var i=0;i < ca.length;i++) {
+        		var c = ca[i];
+        		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    		}
+    		return null;
+		}
+
+	</script>
+
+
 </head>
 
 <body>
@@ -29,7 +79,7 @@
 	<br> &nbsp&nbsp&nbsp 4) using mentors other than teachers who provided substantial guidance, data, or equipment not available in schools
 	</div>
 	<ul>
-		<li style="padding-left:3em;text-indent:-3em"><label><input type="radio" name="student_number" value="1">
+		<li style="padding-left:3em;text-indent:-3em"><label><input onclick="display()" type="radio" name="student_number" value="1">
 		<span class="label" style="font-weight:bold">RRI (grades 9-12)</span><span class="bad-grade-for-category"></span></label></li>
 		<li style="padding-left:3em;text-indent:-3em"><label><input type="radio" name="student_number" value="2">
 		<span class="label" style="font-weight:bold">Non-RRI (all grades)</span> <span class="bad-grade-for-category"></span></label></li>
@@ -37,7 +87,9 @@
 </div>
 
 
-
+<button type="button" onclick="temp();"> 1 </button>
+<button type="button" onclick="showCookie();"> show </button>
+<button type="button" onclick="clearListCookies();"> delete </button>
 
 
 <div>
