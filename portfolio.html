@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+
+	<script src="jquery.js"></script>
+
+
+<head>
+
+	<header class="nav-down">
+	<h1 class="header-content">
+		content
+	</h1>
+	</header>
+
+	<title>
+		Art
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery.js"></script>
+	<script>
+
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 20;
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+   			didScroll = true;
+   			console.log("scrolled");
+		});
+
+		setInterval(function() {
+    		if (didScroll) {
+        		hasScrolled();
+        		didScroll = false;
+    		}
+		}, 250);
+
+		function hasScrolled() {
+    		var st = $(this).scrollTop();
+    
+    		if(Math.abs(lastScrollTop - st) <= delta)
+        		return;
+    
+    		if (st > lastScrollTop && st > navbarHeight){
+        		$('header').removeClass('nav-down').addClass('nav-up');
+    		} else {
+        		if(st + $(window).height() < $(document).height()) {
+            		$('header').removeClass('nav-up').addClass('nav-down');
+        		}
+    		}
+    
+    		lastScrollTop = st;
+		}
+
+
+
+	</script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+
+<div class="page-content-container">
+	
+	<div class="container">
+		<div class="item1a">
+			<div class="thumbnail" id="image">
+			<img src="images/same.jpg" class="image">
+			</div>
+		</div>
+		<div class="item1a">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.47.24.jpg" class="image">
+			</div>
+		</div>
+		<div class="item1a">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.47.47.jpg" class="image">
+			</div>
+		</div>
+		<div class="item1a">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.48.02.jpg" class="image">
+			</div>
+		</div>
+		<div class="item1a">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.48.17.jpg" class="image">
+			</div>
+		</div>
+		<div class="item1a">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.48.29.jpg" class="image">
+			</div>
+		</div>
+		<div class="item2c">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.46.06.jpg" class="image">
+			</div>
+		</div>
+		<div class="item2d">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 11.46.23.jpg" class="image">
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+</body>
+
+
+</html>
