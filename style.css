@@ -56,10 +56,14 @@ body {
 		"3a 3b 3c 3d";
 }
 
+
+#block{
+  justify-self: center;
+  align-self: center;
+}
+
 .item1a{
 	grid-area: 1a;
-	justify-self: center;
-	align-self: center;
 }
 .item1b{
 	grid-area: 1b;

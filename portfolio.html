@@ -20,6 +20,15 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="jquery.js"></script>
 	<script>
+		
+
+		{
+			document.getElementsByClassName('block').forEach(function(element) {
+				element.addEventListener('click', function() {
+					expand(element);
+				})
+			})
+		}
 
 		var didScroll;
 		var lastScrollTop = 0;
@@ -32,7 +41,7 @@
 		});
 
 		setInterval(function() {
-    		if (didScroll) {
+    		if (didScroll) {	
         		hasScrolled();
         		didScroll = false;
     		}
@@ -57,6 +66,10 @@
 
 
 
+		var classname = document.getElementByID("block")
+
+
+
 	</script>
 
 
@@ -74,44 +87,84 @@
 <div class="page-content-container">
 	
 	<div class="container">
-		<div class="item1a">
+		<div class="item1a" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/same.jpg" class="image">
 			</div>
 		</div>
-		<div class="item1a">
+		<div class="item1b" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.47.24.jpg" class="image">
 			</div>
 		</div>
-		<div class="item1a">
+		<div class="item1c" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.47.47.jpg" class="image">
 			</div>
 		</div>
-		<div class="item1a">
+		<div class="item1d" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.48.02.jpg" class="image">
 			</div>
 		</div>
-		<div class="item1a">
+		<div class="item2a" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.48.17.jpg" class="image">
 			</div>
 		</div>
-		<div class="item1a">
+		<div class="item2b" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.48.29.jpg" class="image">
 			</div>
 		</div>
-		<div class="item2c">
+		<div class="item2c" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.46.06.jpg" class="image">
 			</div>
 		</div>
-		<div class="item2d">
+		<div class="item2d" id="block">
 			<div class="thumbnail" id="image">
 			<img src="images/2017-08-11 11.46.23.jpg" class="image">
+			</div>
+		</div>
+		<div class="item3a" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.02.56.jpg" class="image">
+			</div>
+		</div>
+		<div class="item3b" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.08.55.jpg" class="image">
+			</div>
+		</div>
+		<div class="item3c" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.02.05.jpg" class="image">
+			</div>
+		</div>
+		<div class="item3d" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.06.46.jpg" class="image">
+			</div>
+		</div>
+		<div class="item4a" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.09.19.jpg" class="image">
+			</div>
+		</div>
+		<div class="item4b" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.10.18.jpg" class="image">
+			</div>
+		</div>
+		<div class="item4c" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.11.35.jpg" class="image">
+			</div>
+		</div>
+		<div class="item4d" id="block">
+			<div class="thumbnail" id="image">
+			<img src="images/2017-08-11 20.11.16.jpg" class="image">
 			</div>
 		</div>
 	</div>
