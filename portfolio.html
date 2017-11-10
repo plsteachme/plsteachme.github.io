@@ -35,6 +35,9 @@
 		var delta = 20;
 		var navbarHeight = $('header').outerHeight();
 
+		var opimages = ["op1", "op2", "op3", "op4", "op5", "op6", "op7", "op8", "op9"];
+
+
 		$(window).scroll(function(event){
    			didScroll = true;
    			console.log("scrolled");
@@ -158,42 +161,58 @@
 		</div>
 		<div id="item4a" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.02.56.jpg" class="image">
+				<a class="lightbox" href="#ch1">
+					<img src="images/ch1.jpg" class="image">
+				</a>			
 			</div>
 		</div>
 		<div id="item4b" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.08.55.jpg" class="image">
+				<a class="lightbox" href="#ch2">
+					<img src="images/ch2.jpg" class="image">
+				</a>				
 			</div>
 		</div>
 		<div id="item4c" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.02.05.jpg" class="image">
+				<a class="lightbox" href="#ch3">
+					<img src="images/ch3.jpg" class="image">
+				</a>	
 			</div>
 		</div>
 		<div id="item4d" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.06.46.jpg" class="image">
+				<a class="lightbox" href="#ch4">
+					<img src="images/ch4.jpg" class="image">
+				</a>	
 			</div>
 		</div>
 		<div id="item5a" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.09.19.jpg" class="image">
+				<a class="lightbox" href="#ch5">
+					<img src="images/ch5.jpg" class="image">
+				</a>	
 			</div>
 		</div>
 		<div id="item5b" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.10.18.jpg" class="image">
+				<a class="lightbox" href="#ch6">
+					<img src="images/ch6.jpg" class="image">
+				</a>	
 			</div>
 		</div>
 		<div id="item5c" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.11.35.jpg" class="image">
+				<a class="lightbox" href="#ch7">
+					<img src="images/ch7.jpg" class="image">
+				</a>	
 			</div>
 		</div>
 		<div id="item5d" class="block">
 			<div class="thumbnail" id="image">
-			<img src="images/2017-08-11 20.11.16.jpg" class="image">
+				<a class="lightbox" href="#ch8">
+					<img src="images/ch8.jpg" class="image">
+				</a>	
 			</div>
 		</div>
 	</div>
@@ -201,41 +220,78 @@
 </div>
 
 <div class="lightbox-target" id="op1">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op1.jpg"/>
 </div>
 <div class="lightbox-target" id="op2">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op2.jpg"/>
 </div>
 <div class="lightbox-target" id="op3">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op3.jpg"/>
 </div>
 <div class="lightbox-target" id="op4">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op4.jpg"/>
 </div>
 <div class="lightbox-target" id="op5">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op5.jpg"/>
 </div>
 <div class="lightbox-target" id="op6">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op6.jpg"/>
 </div>
 <div class="lightbox-target" id="op7">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op7.jpg"/>
 </div>
 <div class="lightbox-target" id="op8">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op8.jpg"/>
 </div>
 <div class="lightbox-target" id="op9">
-	<a class="lightbox-close" href="#"></a>
+	<a class="lightbox-close" href="javascript:history.back()"></a>
    	<img src="images/op9.jpg"/>
 </div>
+
+<div class="lightbox-target" id="ch1">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch1.jpg"/>
+</div>
+<div class="lightbox-target" id="ch2">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch2.jpg"/>
+</div>
+<div class="lightbox-target" id="ch3">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch3.jpg"/>
+</div>
+<div class="lightbox-target" id="ch4">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch4.jpg"/>
+</div>
+<div class="lightbox-target" id="ch5">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch5.jpg"/>
+</div>
+<div class="lightbox-target" id="ch6">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch6.jpg"/>
+</div>
+<div class="lightbox-target" id="ch7">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch7.jpg"/>
+</div>
+<div class="lightbox-target" id="ch8">
+	<a class="lightbox-close" href="javascript:history.back()"></a>
+   	<img src="images/ch8.jpg"/>
+</div>
+
+
+
+<script type="text/javascript" src="maintainscroll.jquery.min.js"></script>
 
 </body>
 
